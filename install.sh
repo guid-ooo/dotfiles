@@ -25,11 +25,11 @@ fi
 
 # Install WezTerm
 command -v wezterm >/dev/null 2>&1 || \
-  (echo '⌨️  Installing WezTerm' && brew install --cask wezterm
+  (echo '⌨️  Installing WezTerm' && brew install --cask wezterm)
 
 # Install Fish
 command -v fish >/dev/null 2>&1 || \
-  (echo '🐟 Installing Fish' && brew install fish
+  (echo '🐟 Installing Fish' && brew install fish)
 
 # Install Oh My Fish
 if [ ! -f ~/.config/omf ]; then
