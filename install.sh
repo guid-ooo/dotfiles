@@ -31,6 +31,10 @@ command -v wezterm >/dev/null 2>&1 || \
 command -v fish >/dev/null 2>&1 || \
   (echo '🐟 Installing Fish' && brew install fish)
 
+# Install VS Code
+command -v vscode >/dev/null 2>&1 || \
+  (echo '🌐 Installing VS Code' && brew install --cask visual-studio-code)
+
 # # Install Oh My Fish
 # if [ ! -f ~/.config/omf ]; then
 #   (echo '🐟  Installing oh-my-fish' && yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install > install fish install --path=~/.local/share/omf --config=~/.config/omf)")
