@@ -33,8 +33,7 @@ command -v fish >/dev/null 2>&1 || \
 
 # Install Oh My Fish
 if [ ! -f ~/.config/omf ]; then
-  (echo '🐟  Installing oh-my-fish' && yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install > install
-fish install --path=~/.local/share/omf --config=~/.config/omf)")
+  (echo '🐟  Installing oh-my-fish' && yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install > install fish install --path=~/.local/share/omf --config=~/.config/omf)")
 fi
 
 echo ""
