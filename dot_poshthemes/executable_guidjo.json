@@ -1,0 +1,81 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#cc3802",
+          "foreground": "#ffffff",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": "{{ if .Env.PNPPSHOST }} \uf8c5 {{ .Env.PNPPSHOST }} {{ end }}",
+          "type": "text"
+        },
+        {
+          "background": "#047e84",
+          "foreground": "#ffffff",
+          "powerline_symbol": "\ue0b0",
+          "style": "powerline",
+          "template": "{{ if .Env.PNPPSSITE }} \uf672 {{ .Env.PNPPSSITE }}{{ end }}",
+          "type": "text"
+        },
+        {
+          "background": "#047e84",
+          "foreground": "#ffffff",
+          "style": "diamond",
+          "template": "{{ if .Env.PNPPSSITE }} {{ end }}",
+          "trailing_diamond": "\ue0b4",
+          "type": "text"
+        }
+      ],
+      "type": "rprompt"
+    },
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#4D21FC",
+          "foreground": "#ffffff",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": " \u23fe {{ .UserName }} ",
+          "type": "session"
+        },
+        {
+          "background": "#2D2B55",
+          "foreground": "#ffffff",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "style": "folder"
+          },
+          "style": "powerline",
+          "template": " \uf74a  {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "background": "#A599E9",
+          "foreground": "#ffffff",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "branch_icon": "",
+            "fetch_stash_count": true,
+            "fetch_status": false,
+            "fetch_upstream_icon": true
+          },
+          "style": "powerline",
+          "template": " \ue725 ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }}) ",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "#ffffff",
+    "template": "🐟 \ufbc0  "
+},
+  "final_space": true,
+  "version": 2
+}
