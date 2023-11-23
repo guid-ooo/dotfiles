@@ -11,7 +11,7 @@ hs.hotkey.bind({"alt"}, "1", function()
 
   f.x = max.x
   f.y = max.y
-  f.w = max.w / 2
+  f.w = (max.w/3)*2
   f.h = max.h
   hs.window.animationDuration=0
   win:setFrame(f)
@@ -23,10 +23,10 @@ hs.hotkey.bind({"alt"}, "2", function()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.x + ((max.w)/2)
-  f.y = max.y
-  f.w = max.w / 2
+  f.w = max.w / 3
   f.h = max.h
+  f.x = max.x + ((max.w)-f.w)
+  f.y = max.y
   hs.window.animationDuration=0
   win:setFrame(f)
 end)

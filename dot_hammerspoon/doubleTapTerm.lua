@@ -21,19 +21,19 @@ module.timeFrame = 0.4
 -- what to do when the double tap of ctrl occurs
 module.action = function()
     -- alert("You double tapped cmd!")
-    local app = hs.application.get("WezTerm")
+    local app = hs.application.get("Warp")
 
 if app then
     if not app:mainWindow() then
-        app:selectMenuItem({"WezTerm", "New OS window"})
+        app:selectMenuItem({"Warp", "New OS window"})
     elseif app:isFrontmost() then
         app:hide()
     else
         app:activate()
     end
 else
-    hs.application.launchOrFocus("WezTerm")
-    app = hs.application.get("WezTerm")
+    hs.application.launchOrFocus("Warp")
+    app = hs.application.get("Warp")
 end
 
 -- app:mainWindow():moveToUnit'[90,90,10,10]'
